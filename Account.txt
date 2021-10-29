@@ -1,0 +1,51 @@
+
+package bankapp;
+
+import java.io.File;
+import java.time.LocalDate;
+import java.util.Date;
+
+
+ public class Account {
+    final private int ID;
+    final private int password;
+    final private    File file;
+    String filename;
+    private String IDtoString;
+    private String PasswordtoString;
+    private int money;
+    final int poso=100;
+    final int poso1=200;
+    final int poso2=300;
+    final int poso3=400; 
+    
+    
+public Account(int Identity,int pass){
+    this.ID=Identity;
+    this.password=pass;
+    filename=Integer.toString(ID);
+    file=new File(filename+"txt");
+        }
+    
+public int getAccountID(){return ID;}
+public int getPassword(){return password;}
+
+public void setMoney(int Money){
+    this.money=Money;
+}
+
+public String GetIDtoString(){return IDtoString=String.valueOf(ID);}
+public String GetPasswordtoString(){return PasswordtoString=String.valueOf(password);}
+
+
+
+
+    
+public String accountBalance(){
+            
+    return Integer.toString(money);
+
+            }
+
+    }
+
